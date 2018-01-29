@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Naslovnica</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="pinObrazac" (ngSubmit)="posaljiPinObrazac()">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>PIN</ion-label>
+        <ion-input type="number" formControlName="pin"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <button color="secondary" ion-button type="submit" [disabled]="!pinObrazac.valid">Kreni</button>
+      </ion-item>
+
+    </ion-list>
+
+  </form>
+
+</ion-content>
